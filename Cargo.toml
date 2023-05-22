@@ -1,0 +1,14 @@
+[workspace]
+members = [
+  # core
+  "core/app",
+]
+
+
+# default to small, optimized workspace release binaries
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+incremental = false
+opt-level = 3
